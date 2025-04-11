@@ -1,0 +1,4 @@
+resources:
+  - manifests/all-services.yaml
+  - instrumentation/
+

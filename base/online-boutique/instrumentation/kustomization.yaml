@@ -1,0 +1,5 @@
+resources:
+  - auto-instrumentation-java.yaml
+  - auto-instrumentation-python.yaml
+  - auto-instrumentation-go.yaml
+
