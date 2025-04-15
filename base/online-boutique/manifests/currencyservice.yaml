@@ -29,7 +29,7 @@ spec:
       annotations:
         instrumentation.opentelemetry.io/inject-java: "java-instrumentation"
     spec:
-      serviceAccountName: currencyservice
+      serviceAccountName: us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice:v0.10.2
       terminationGracePeriodSeconds: 5
       securityContext:
         fsGroup: 1000
