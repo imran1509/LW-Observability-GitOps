@@ -1,3 +1,14 @@
 resources:
-  - .
+  - adservice.yaml
+  - cartservice.yaml
+  - checkoutservice.yaml
+  - currencyservice.yaml
+  - emailservice.yaml
+  - frontend.yaml
+  - loadgenerator.yaml
+  - paymentservice.yaml
+  - productcatalogservice.yaml
+  - recommendationservice.yaml
+  - redis.yaml
+  - shippingservice.yaml
 
