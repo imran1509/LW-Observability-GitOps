@@ -3,4 +3,5 @@ resources:
   - tempo/
   - otel-collector/
   - online-boutique/
+  - grafana/
 
