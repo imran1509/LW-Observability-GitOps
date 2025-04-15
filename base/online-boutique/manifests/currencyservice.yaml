@@ -29,7 +29,7 @@ spec:
       annotations:
         instrumentation.opentelemetry.io/inject-java: "java-instrumentation"
     spec:
-      serviceAccountName: us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice:v0.10.2
+      serviceAccountName: currencyservice
       terminationGracePeriodSeconds: 5
       securityContext:
         fsGroup: 1000
@@ -45,7 +45,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: currencyservice
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice:v0.10.2
         ports:
         - name: grpc
           containerPort: 7000
