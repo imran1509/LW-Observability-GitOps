@@ -3,11 +3,19 @@ kind: Service
 metadata:
   name: grafana
   namespace: observability
+  labels:
+    app.kubernetes.io/name: grafana
+    app.kubernetes.io/instance: observability
 spec:
   selector:
-    app: grafana
+    app.kubernetes.io/name: grafana
+    app.kubernetes.io/instance: observability
   ports:
-    - protocol: TCP
-      port: 3000
+    - port: 80
       targetPort: 3000
+      protocol: TCP
+      name: http
+  type: LoadBalancer  # Change this from ClusterIP to LoadBalancer
+---
+
 
