@@ -1,0 +1,3 @@
+resources:
+  - manifests/opentelemetry-operator.yaml
+
