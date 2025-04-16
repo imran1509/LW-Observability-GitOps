@@ -1,0 +1,4 @@
+resources:
+  - apps/otel-operator-app.yaml
+  - apps/observability-app.yaml
+  - base/
