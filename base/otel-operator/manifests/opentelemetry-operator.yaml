@@ -3471,6 +3471,12 @@ spec:
     singular: opentelemetrycollector
   scope: Namespaced
   versions:
+    - name: v1alpha1
+      served: true
+      storage: true
+    - name: v1beta1
+      served: true
+      storage: false
     - additionalPrinterColumns:
         - description: Deployment Mode
           jsonPath: .spec.mode
