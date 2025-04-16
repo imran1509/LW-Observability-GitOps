@@ -1,7 +1,0 @@
-resources:
-  - namespaces/
-  - tempo/
-  - otel-collector/
-  - online-boutique/
-  - grafana/
-  - otel-operator/
