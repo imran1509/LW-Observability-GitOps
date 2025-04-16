@@ -9033,10 +9033,10 @@ spec:
           type: object
       served: true
       storage: true
-        - name: v1beta1
-          served: true
-          storage: false
-          additionalPrinterColumns: []
+      - name: v1beta1
+        served: true
+        storage: false
+        additionalPrinterColumns: []
       subresources:
         scale:
           labelSelectorPath: .status.scale.selector
