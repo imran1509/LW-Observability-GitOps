@@ -60,6 +60,7 @@ Fix: Corrected manifest values in `currencyservice` Deployment.
 4. ❌ App stuck in Health: Degraded
 
 Cause: `loadgenerator` used an outdated or missing image `busybox:latest`.
+
 Fix: Updated to the correct version used by the official Online Boutique:
 
 ```
@@ -69,6 +70,7 @@ image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerato
 5. ❌ ArgoCD ComparisonError - path not found
 
 Cause: Misplaced ArgoCD Application file (`apps/otel-operator-app.yaml` inside `base/` instead of `apps/`)
+
 Fix: Moved it to correct path under `apps/`.
 
 6. ❌ Traces not showing in Grafana (Explore)
