@@ -4,3 +4,4 @@ resources:
   - otel-collector/
   - online-boutique/
   - grafana/
+  - otel-operator
