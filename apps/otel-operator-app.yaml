@@ -7,11 +7,11 @@ spec:
   project: default
   destination:
     name: ""
-    namespace: observability
+    namespace: opentelemetry-operator-system
     server: https://kubernetes.default.svc
   source:
     repoURL: https://open-telemetry.github.io/opentelemetry-helm-charts
-    targetRevision: HEAD
+    targetRevision: 0.45.1
     chart: opentelemetry-operator
     helm:
       values: |
