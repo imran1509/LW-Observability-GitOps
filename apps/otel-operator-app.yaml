@@ -4,6 +4,7 @@ metadata:
   name: opentelemetry-operator
   namespace: argocd
 spec:
+  project: default
   destination:
     name: ""
     namespace: observability
