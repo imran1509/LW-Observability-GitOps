@@ -73,6 +73,29 @@ Cause: Misplaced ArgoCD Application file (`apps/otel-operator-app.yaml` inside `
 
 Fix: Moved it to correct path under `apps/`.
 
-6. ❌ Traces not showing in Grafana (Explore)
+6. ❌ API Version Conflict (`v1beta1` vs `v1alpha1`)
 
-Currently working on resolving this
+Despite all manifests using `v1alpha1`, we consistently encountered the following error:
+
+```
+request to convert CR from an invalid group/version: opentelemetry.io/v1beta1
+```
+
+This indicates the cluster is still referencing stale or misconfigured CRDs from a previous v1beta1 deployment.
+
+7. ❌ Stuck or Corrupted CRDs
+
+Attempts to delete or reapply OpenTelemetryCollector resources failed with similar conversion errors. 
+
+Even forceful deletion via:
+```
+kubectl delete crd opentelemetrycollectors.opentelemetry.io  --force --grace-period=0
+
+```
+I resolved this by removing nd patching the finalizers in CRD
+
+```
+kubectl patch crd opentelemetrycollectors.opentelemetry.io -p '{"metadata":{"finalizers":[]}}' --type=merge
+```
+
+8. 
