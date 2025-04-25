@@ -97,5 +97,3 @@ I resolved this by removing nd patching the finalizers in CRD
 ```
 kubectl patch crd opentelemetrycollectors.opentelemetry.io -p '{"metadata":{"finalizers":[]}}' --type=merge
 ```
-
-8. 
